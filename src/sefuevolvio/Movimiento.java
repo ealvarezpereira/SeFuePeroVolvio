@@ -92,6 +92,7 @@ public class Movimiento extends TimerTask {
 
             cuenta = 7;
             y--;
+            Puntero2.adioshola = false;
         }
 
         if (Puntero2.vuelve == true) {
@@ -105,7 +106,16 @@ public class Movimiento extends TimerTask {
             if (y == 250) {
                 Puntero2.vuelve = false;
             }
-            
+            Puntero2.adioshola = false;
+        }
+        
+        
+        if (Puntero2.adioshola == true){
+        
+            y--;
+            if (y == -400) {
+                y = 650;
+            }
         }
 
         Puntero2.img.setBounds(x, y, 250, 250);
